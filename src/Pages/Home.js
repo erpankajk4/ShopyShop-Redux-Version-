@@ -1,10 +1,9 @@
 import React from 'react'
+import MainContent from '../Components/MainContent'
 
 function Home() {
   return (
-    <div>
-      Home
-    </div>
+<MainContent />
   )
 }
 
