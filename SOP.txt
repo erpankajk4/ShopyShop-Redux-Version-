@@ -1,3 +1,10 @@
 create-react-app shopyshop-redux
+git init
 npm install firebase
+setting up firbase
+git add .
+git commit -m "setting uo firebasDB "
+
 npm i react-router-dom
+
+
