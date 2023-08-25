@@ -1,0 +1,3 @@
+create-react-app shopyshop-redux
+npm install firebase
+npm i react-router-dom
