@@ -5,7 +5,7 @@ import { Outlet, NavLink } from "react-router-dom";
 function NavBar() {
     return (
         <>
-            <nav className="bg-gray-800 p-3">
+            <nav className="bg-gray-800 p-3 sticky top-0">
                 <div className="max-w-8xl mx-auto flex items-center justify-between">
                     <NavLink to="/" className="text-white hover:text-gray-300">
                     <div className="flex items-center">

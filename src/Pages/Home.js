@@ -1,9 +1,9 @@
 import React from 'react'
-import MainContent from '../Components/MainContent'
-
+import ItemCardList from '../Components/ItemCardList'
 function Home() {
-  return (
-<MainContent />
+  return (<>
+    <ItemCardList />
+  </>
   )
 }
 

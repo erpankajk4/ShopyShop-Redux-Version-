@@ -19,4 +19,9 @@ creating Item Card and render in Main Content that is in Home Page
 
 npm i react-redux
 npm install @reduxjs/toolkit
+ git commit -m "setting up react-redux and reduxjs/toolkit. Creating productReducer and store. productReducer fetch data from API and store it in Firebase."
+
+npm install  react-spinners 
+creating a Loading page
+creating filter Component
 
