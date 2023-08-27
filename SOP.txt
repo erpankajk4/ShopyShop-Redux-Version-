@@ -7,4 +7,16 @@ git commit -m "setting uo firebasDB "
 
 npm i react-router-dom
 
+setting up tailwindcss
+
+setting up Font Awesome and creating NavBar
+npm install @fortawesome/react-fontawesome @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons
+
+
+npm i axios
+creating Item Card and render in Main Content that is in Home Page   
+
+
+npm i react-redux
+npm install @reduxjs/toolkit
 
