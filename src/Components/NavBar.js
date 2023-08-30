@@ -1,5 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { notify } from "../Components/notify";
+import { logOut, signIn } from "../ReduxToolKit/userReducer";
+
 import { Outlet, NavLink } from "react-router-dom";
 
 function NavBar() {

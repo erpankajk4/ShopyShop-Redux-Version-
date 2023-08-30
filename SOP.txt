@@ -23,5 +23,7 @@ npm install @reduxjs/toolkit
 
 npm install  react-spinners 
 creating a Loading page
-creating filter Component
+creating filter Component. creating a search bar. make them functional
 
+npm install react-toastify
+Creating SignIn and SignOut Page and its Reducer. Also has Firebase Auth. Creating notify component and used it. Create Authentication on firebase website

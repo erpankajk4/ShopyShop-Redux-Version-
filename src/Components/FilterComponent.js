@@ -3,7 +3,7 @@ import { faList, faTshirt, faFemale, faMobileAlt, faGem } from '@fortawesome/fre
 
 export default function FilterComponent({ setPrice, setCategory }) {
     return (
-        <div className="bg-white border-r border-gray-300 p-4 h-screen w-1/6 min-w-min sticky left-0 transform transition-transform translate-x-0" style={{ top: "56px" }}>
+        <div className="bg-white border-r border-gray-300 p-4 h-screen w-1/6 min-w-min sticky left-0" style={{ top: "56px", height: "83vh" }}>
             <h1 className="text-xl font-semibold mb-4">FilterBar</h1>
 
             <div className="mb-6">
