@@ -1,32 +1,21 @@
-
 import { toast } from 'react-toastify';
 
-export const notify = (type, massage) => {
+export const notify = (type, message) => {
     switch (type) {
         case "info":
-            toast.info(massage, {
-                theme: "dark"
-            });
+            toast.info(message, { className: 'bg-blue-500 text-white' });
             break;
         case "success":
-            toast.success(massage, {
-                theme: "dark"
-            });
+            toast.success(message, { className: 'bg-green-500 text-white' });
             break;
         case "warn":
-            toast.warn(massage, {
-                theme: "dark"
-            });
+            toast.warn(message, { className: 'bg-yellow-500 text-white' });
             break;
         case "error":
-            toast.error(massage, {
-                theme: "dark"
-            });
+            toast.error(message, { className: 'bg-red-500 text-white' });
             break;
         default:
-            toast(massage, {
-                theme: "dark"
-            });
+            toast(message);
             break;
     }
 }

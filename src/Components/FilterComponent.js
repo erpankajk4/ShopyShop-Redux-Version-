@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faList, faTshirt, faFemale, faMobileAlt, faGem } from '@fortawesome/free-solid-svg-icons';
 
-export default function FilterComponent({ setPrice, setCategory }) {
+export default function FilterComponent({ setPrice, setCategory, price }) {
     return (
         <div className="bg-white border-r border-gray-300 p-4 h-screen w-1/6 min-w-min sticky left-0" style={{ top: "56px", height: "83vh" }}>
             <h1 className="text-xl font-semibold mb-4">FilterBar</h1>
@@ -16,6 +16,7 @@ export default function FilterComponent({ setPrice, setCategory }) {
                         max="2000"
                         step="10"
                         className="w-full"
+                        value={price}
                         onChange={(e) => setPrice(e.target.value)}
                     />
                     <span className="text-gray-700">Max</span>

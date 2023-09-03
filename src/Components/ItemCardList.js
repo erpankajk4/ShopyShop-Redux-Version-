@@ -45,7 +45,7 @@ function ItemCardList() {
         <>
             <div className='flex' >
                 {/* Filter Side Bar  */}
-                <FilterComponent setPrice={setPrice} setCategory={setCategory} />
+                <FilterComponent setPrice={setPrice} setCategory={setCategory} price={price} />
                 <div className="flex-1">
                     {/* Search Bar  */}
                     <div className="p-4 bg-white shadow-md flex items-center sticky right-0" style={{ top: "56px" }}>
@@ -65,6 +65,7 @@ function ItemCardList() {
                             {filteredProducts.map((product) => (
                                 <ItemCard
                                     key={product.id}
+                                    id={product.id}
                                     title={product.title}
                                     price={product.price}
                                     description={product.description}

@@ -16,6 +16,7 @@ export const signIn = createAsyncThunk("userReducer/signIn",
         // Sign in the user using the provided email and password
         await signInWithEmailAndPassword(auth, payload.email, payload.password);
         notify("success", `Sign-In successfull, hi ${auth.currentUser.displayName}`);
+        // console.log(auth.currentUser.displayName);
         localStorage.setItem("userUID", auth.currentUser.uid);
         // Dispatch the updateUserUID action to update the userUID in the Redux store
         thunkAPI.dispatch(userAction.updateUserUID(auth.currentUser.uid));
