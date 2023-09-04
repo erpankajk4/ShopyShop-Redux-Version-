@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
-
+// importing Product Modal
 import Modal from "./ProductDetailsModal"
 // CSS 
 import styles from "./CSS/itemCard.module.css"
@@ -34,7 +34,7 @@ const ItemCard = ({ id, title, price, description, category, image }) => {
             <img className={`p-8 rounded-t-lg ${styles.cardContainerImage}`} src={image} alt={category} />
             {/* description of the product name,price, add button */}
             <div className={`px-5 pb-5`}>
-                <h5 className={`text-xl font-semibold tracking-tight text-gray-900 ${styles.cardContainerTitle}`}>
+                <h5 className={`text-xl font-semibold tracking-tight text-gray-900 cursor-pointer ${styles.cardContainerTitle}`}>
                     <span className="hover:underline" onClick={toggleModal}>
                         {title}
                     </span>
@@ -43,14 +43,7 @@ const ItemCard = ({ id, title, price, description, category, image }) => {
                     <span className="text-3xl font-bold text-gray-900 ">
                         ₹{price}
                     </span>
-                    {/* <button
-                        className={`text-white ${isItemInCart ? 'bg-red-700 hover:bg-red-800' : 'bg-blue-700 hover:bg-blue-800'} focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center ${isItemInCart ? 'dark:bg-red-600 dark:hover:bg-red-700' : 'dark:bg-blue-600 dark:hover:bg-blue-700'
-                            }`}
-                        onClick={handleAddToCart}
-                    >
-                        <FontAwesomeIcon icon={faCartPlus} className="mr-2" />
-                        {isItemInCart ? 'Remove from cart' : 'Add to cart'}
-                    </button> */}
+                    {/* Add to cart Button  */}
                     <button
                         className={`text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700`}
                         onClick={(e) => handleAddToCart(e)}

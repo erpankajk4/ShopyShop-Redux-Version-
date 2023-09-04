@@ -4,7 +4,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// all the pages and component to render
+// import Pages and NavBar component
 import NavBar from "./Components/NavBar"
 import Home from "./Pages/Home";
 import MyOrder from "./Pages/MyOrder";
@@ -32,7 +32,7 @@ function App() {
     <>
       <RouterProvider router={router} />
       <ToastContainer position="top-right"
-        autoClose={1000}
+        autoClose={500}
         hideProgressBar={false}
         closeOnClick={false}
         pauseOnHover={true}

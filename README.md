@@ -1,70 +1,156 @@
-# Getting Started with Create React App
+# ShopyShop (Redux Version)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ShopyShop is a web application for the customers of an e-commerce business. It allows users to register, login, browse products, add them to a cart, make orders, and more.
 
-## Available Scripts
+## Table of Contents
+- [Demo](#demo)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Redux State Management](#redux-state-management)
+- [Folder Structure](#folder-structure)
 
-In the project directory, you can run:
+## Demo
 
-### `npm start`
+[Link to the live demo of your application]
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- **User Authentication**: Register and log in to access your account.
+- **Product Catalog**: Browse a wide range of products with detailed information.
+- **Shopping Cart**: Add and remove products, adjust quantities and review your cart.
+- **Real-time Updates**: Cart and product listings update in real-time using FireBase.
+- **Orders History**: View your past orders and purchase details.
+- **Efficient State Management**: Redux Toolkit ensures organized and efficient state handling.
+- **Performance Optimization**: Memoized selectors and normalized state structure.
+- **Firebase Integration**: Firestore for data storage and Firebase Authentication for secure logins.
+- **Toasts & Notifications**: Receive notifications for successful actions and errors.
+- **Responsive Design**: Enjoy a seamless experience on various screen sizes.
+- **Search & Filter**: Easily find products using search and category filters.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- **React**: Building user interfaces.
+- **Redux Toolkit**: Managing global state.
+- **Firebase**: Authentication and data storage.
+- **Axios**: Making network requests.
+- **React Router DOM**: Client-side routing.
+- **Tailwind CSS**: Styling the application.
+- **Font Awesome**: High-quality icons.
+- **React Toastify**: Displaying notifications.
+- **React Spinners**: Adding loading indicators.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Follow these steps to set up and run the ShopyShop Redux Version on your local machine.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
 
-### `npm run eject`
+   ```
+   git clone https://github.com/yourusername/ShopyShop-redux.git
+   cd ShopyShop-redux
+   npm install
+   ```
+2. Install the dependencies:
+```
+npm install
+```
+3. Start the server:
+```
+npm start
+```
+The application should now be running at `http://localhost:3000`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Redux State Management
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Redux is a state management library used in the ShopyShop Redux Version application to manage global state, ensuring a consistent and predictable data flow throughout the application. Redux Toolkit is utilized to simplify and streamline the Redux setup.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Reducers and Actions
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### `cartReducer.js`
 
-## Learn More
+- **addItem**: An asynchronous thunk responsible for adding a product to the user's cart. It checks if the product is already in the cart and handles the addition accordingly.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **fetchCartProducts**: An asynchronous thunk for fetching cart products in real-time. It listens for changes to the cart collection and updates the cart items in the state.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **removeFromCart**: An asynchronous thunk to remove a particular product from the cart.
 
-### Code Splitting
+- **increaseQuantity**: An asynchronous thunk to increase the quantity of a specific product in the cart.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **decreaseQuantity**: An asynchronous thunk to decrease the quantity of a product in the cart or remove it if the quantity reaches zero.
 
-### Analyzing the Bundle Size
+- **purchase**: An asynchronous thunk to purchase all items in the cart. It removes items from the cart one by one and adds them to the MyOrders collection.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### `productReducer.js`
 
-### Making a Progressive Web App
+- **fetchProductsAndStore**: An asynchronous thunk responsible for fetching from `https://fakestoreapi.com/products` and storing products in DataBase . It checks the last fetch timestamp to determine if data should be fetched from an external API or Firebase.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### `userReducer.js`
 
-### Advanced Configuration
+- **signIn**: An asynchronous thunk to handle user sign-in. It signs in the user using email and password, updates the userUID in the Redux store, and stores it in local storage.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **logOut**: An asynchronous thunk to handle user log-out. It logs the user out, clears the userUID from the state, and removes it from local storage.
 
-### Deployment
+### Redux State Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The Redux state is divided into multiple parts:
 
-### `npm run build` fails to minify
+- **Cart State**: Managed by `cartReducer.js`, including cart items, loading state, and error handling.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Product State**: Managed by `productReducer.js`, which holds the list of products, loading state, and error handling.
+
+- **User State**: Managed by `userReducer.js`, storing the user's unique identifier (UID).
+
+
+### Firebase Integration
+
+Firestore from Firebase is used for data storage and Firebase Authentication is used for user sign-in and log-out.
+
+With Redux and Firebase, ShopyShop Redux Version ensures efficient state management and data handling, providing a seamless shopping experience for users.
+
+
+## Folder Structure
+📦shopyshop-redux
+ ┣ 📂public
+ ┃ ┣ 📜favicon.png
+ ┃ ┗ 📜index.html
+ ┣ 📂src
+ ┃ ┣ 📂assets
+ ┃ ┃ ┗ 📜favicon.png   - LOGO 
+ ┃ ┣ 📂Components
+ ┃ ┃ ┣ 📂CSS
+ ┃ ┃ ┃ ┗ 📜itemCard.module.css
+ ┃ ┃ ┣ 📜CartItem.js
+ ┃ ┃ ┣ 📜FilterComponent.js
+ ┃ ┃ ┣ 📜ItemCard.js
+ ┃ ┃ ┣ 📜ItemCardList.js
+ ┃ ┃ ┣ 📜Loader.js
+ ┃ ┃ ┣ 📜NavBar.js
+ ┃ ┃ ┣ 📜notify.js
+ ┃ ┃ ┗ 📜ProductDetailsModal.js
+ ┃ ┣ 📂FireBaseDB
+ ┃ ┃ ┗ 📜firebaseInit.js
+ ┃ ┣ 📂Pages
+ ┃ ┃ ┣ 📜Cart.js
+ ┃ ┃ ┣ 📜ErrorPage.js
+ ┃ ┃ ┣ 📜Home.js
+ ┃ ┃ ┣ 📜MyOrder.js
+ ┃ ┃ ┣ 📜SignIn.js
+ ┃ ┃ ┗ 📜SignUp.js
+ ┃ ┣ 📂ReduxToolKit
+ ┃ ┃ ┣ 📜cartReducer.js
+ ┃ ┃ ┣ 📜productReducer.js
+ ┃ ┃ ┣ 📜store.js
+ ┃ ┃ ┗ 📜userReducer.js
+ ┃ ┣ 📜App.js
+ ┃ ┣ 📜index.css
+ ┃ ┗ 📜index.js
+ ┣ 📜.gitignore
+ ┣ 📜package-lock.json
+ ┣ 📜package.json
+ ┣ 📜README.md
+ ┣ 📜SOP.txt
+ ┗ 📜tailwind.config.js
+
+

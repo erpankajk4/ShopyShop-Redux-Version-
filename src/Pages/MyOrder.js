@@ -9,7 +9,6 @@ import Loader from '../Components/Loader';
 const MyOrders = () => {
   const [orders, setOrders] = useState([]);
   const userUID = useSelector((state) => state.userReducer.userUID);
-  // const loading = useSelector(state => state.myCartReducer.loading);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {

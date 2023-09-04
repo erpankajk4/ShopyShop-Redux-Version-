@@ -6,7 +6,7 @@ import { faCartPlus, faTimes } from '@fortawesome/free-solid-svg-icons';
 const Modal = ({ product, onClose, onAddToCart }) => {
   return (
     <div className="fixed bg-black bg-opacity-75 inset-0 flex items-center justify-center z-50 overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
-      <div className="relative w-1/2 mx-auto my-6"style={{minWidth:"700px", height:"80%"}}>
+      <div className="relative w-1/2 mx-auto my-6" style={{ minWidth: "700px", height: "80%" }}>
         <div className="border-0 rounded-lg shadow-lg relative flex flex-col md:flex-row w-full bg-white outline-none focus:outline-none">
           {/* Left Side */}
           <div className="md:w-1/2 p-6">
@@ -23,8 +23,8 @@ const Modal = ({ product, onClose, onAddToCart }) => {
             {/* "Add to Cart" Button */}
             <div className="flex items-center justify-end mt-auto">
               <button
-                        className={`text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700`}
-                        type="button"
+                className={`text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700`}
+                type="button"
                 style={{ transition: 'all .15s ease' }}
                 onClick={() => {
                   onAddToCart(product);
