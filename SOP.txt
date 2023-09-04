@@ -29,3 +29,5 @@ npm install react-toastify
 Creating SignIn and SignOut Page and its Reducer. Also has Firebase Auth. Creating notify component and used it. Create Authentication on firebase website
 
 Correct the react-toastify code. add sign-in and sign-out function in NavBar. improve the productReducer for faster loading. created cartReducer, cartItem and Cart Page. correct filter bar default range. make Cart click direct to singn page if not. Created Cart Badge.
+
+created a my Order page. Created a Product Modal. some Fixes

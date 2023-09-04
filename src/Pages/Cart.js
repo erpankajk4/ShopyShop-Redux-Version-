@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-import { fetchCartProducts, myCartActions, purchase,  } from "../ReduxToolKit/cartReducer";
+import { fetchCartProducts, purchase, } from "../ReduxToolKit/cartReducer";
 import CartItem from "../Components/CartItem";
 import Loader from '../Components/Loader';
-import { Navigate } from "react-router-dom";
 
 const Cart = () => {
   // State to store the total price of items in the cart
@@ -14,7 +13,7 @@ const Cart = () => {
   const dispatch = useDispatch();
   const userUID = useSelector((state) => state.userReducer.userUID);
   const cartItems = useSelector((state) => state.myCartReducer.cartItems);
-  const loading = useSelector(state => state.myCartReducer.loading);
+  const loading = useSelector((state) => state.myCartReducer.loading);
 
   useEffect(() => {
     if (userUID) {
@@ -28,7 +27,7 @@ const Cart = () => {
     const newTotalPrice = cartItems.reduce((total, item) => {
       return total + item.price * item.qty;
     }, 0);
-  
+
     setTotalPrice(newTotalPrice.toFixed(2));
   }, [cartItems]);
 

@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice, createAction } from "@reduxjs/toolkit"
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 import { addDoc, collection, deleteDoc, doc, getDocs, query, updateDoc, where, onSnapshot } from "firebase/firestore";
 import { db } from "../FireBaseDB/firebaseInit";
 import { notify } from "../Components/notify";
@@ -76,7 +76,6 @@ export const removeFromCart = createAsyncThunk("myCartActions/removeFromCart",
     const userUID = thunkAPI.getState().userReducer.userUID;
     // Delete the item from the user's cart in Firestore
     await deleteDoc(doc(db, "User", userUID, "MyCart", payload));
-    notify('warn', 'Product has been Removed');
 });
 
 
@@ -136,8 +135,8 @@ export const purchase = createAsyncThunk("myCartActions/purchase", async (_, thu
     const allItemsInMyCart = [];
 
     querySnapshot.forEach(async (doc) => {
-        const { name, price, qty } = doc.data();
-        allItemsInMyCart.push({ name, price, qty });
+        const { title, price, qty, image } = doc.data();
+        allItemsInMyCart.push({ title, price, qty, image });
 
         // Remove the item from the user's cart in Firestore
         await thunkAPI.dispatch(removeFromCart(doc.id));
