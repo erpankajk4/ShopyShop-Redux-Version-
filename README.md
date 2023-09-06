@@ -2,6 +2,8 @@
 
 ShopyShop is a web application for the customers of an e-commerce business. It allows users to register, login, browse products, add them to a cart, make orders, and more.
 
+Hosted Link on Netlify - 
+
 ## Table of Contents
 - [Demo](#demo)
 - [Features](#features)
@@ -11,9 +13,7 @@ ShopyShop is a web application for the customers of an e-commerce business. It a
 - [Folder Structure](#folder-structure)
 
 ## Demo
-
-[Link to the live demo of your application]
-
+![Home Page](https://github.com/erpankajk4/ShopyShop-Redux-Version-/assets/118353291/41681f92-6146-455a-9564-b079ec5b6a98)
 
 ## Features
 
@@ -48,7 +48,7 @@ Follow these steps to set up and run the ShopyShop Redux Version on your local m
 1. Clone the repository:
 
    ```
-   git clone https://github.com/yourusername/ShopyShop-redux.git
+   git clone https://github.com/erpankajk4/ShopyShop-Redux-Version-.git
    cd ShopyShop-redux
    npm install
    ```
@@ -111,46 +111,53 @@ With Redux and Firebase, ShopyShop Redux Version ensures efficient state managem
 
 
 ## Folder Structure
-📦shopyshop-redux
- ┣ 📂public
- ┃ ┣ 📜favicon.png
- ┃ ┗ 📜index.html
- ┣ 📂src
- ┃ ┣ 📂assets
- ┃ ┃ ┗ 📜favicon.png   - LOGO 
- ┃ ┣ 📂Components
- ┃ ┃ ┣ 📂CSS
- ┃ ┃ ┃ ┗ 📜itemCard.module.css
- ┃ ┃ ┣ 📜CartItem.js
- ┃ ┃ ┣ 📜FilterComponent.js
- ┃ ┃ ┣ 📜ItemCard.js
- ┃ ┃ ┣ 📜ItemCardList.js
- ┃ ┃ ┣ 📜Loader.js
- ┃ ┃ ┣ 📜NavBar.js
- ┃ ┃ ┣ 📜notify.js
- ┃ ┃ ┗ 📜ProductDetailsModal.js
- ┃ ┣ 📂FireBaseDB
- ┃ ┃ ┗ 📜firebaseInit.js
- ┃ ┣ 📂Pages
- ┃ ┃ ┣ 📜Cart.js
- ┃ ┃ ┣ 📜ErrorPage.js
- ┃ ┃ ┣ 📜Home.js
- ┃ ┃ ┣ 📜MyOrder.js
- ┃ ┃ ┣ 📜SignIn.js
- ┃ ┃ ┗ 📜SignUp.js
- ┃ ┣ 📂ReduxToolKit
- ┃ ┃ ┣ 📜cartReducer.js
- ┃ ┃ ┣ 📜productReducer.js
- ┃ ┃ ┣ 📜store.js
- ┃ ┃ ┗ 📜userReducer.js
- ┃ ┣ 📜App.js
- ┃ ┣ 📜index.css
- ┃ ┗ 📜index.js
- ┣ 📜.gitignore
- ┣ 📜package-lock.json
- ┣ 📜package.json
- ┣ 📜README.md
- ┣ 📜SOP.txt
- ┗ 📜tailwind.config.js
+📦shopyshop-redux<br/>
+ ┣ 📂public<br/>
+ ┃ ┣ 📜favicon.png<br/>
+ ┃ ┗ 📜index.html<br/>
+ ┣ 📂src<br/>
+ ┃ ┣ 📂assets<br/>
+ ┃ ┃ ┗ 📜favicon.png   - LOGO <br/>
+ ┃ ┣ 📂Components<br/>
+ ┃ ┃ ┣ 📂CSS<br/>
+ ┃ ┃ ┃ ┗ 📜itemCard.module.css<br/>
+ ┃ ┃ ┣ 📜CartItem.js<br/>
+ ┃ ┃ ┣ 📜FilterComponent.js<br/>
+ ┃ ┃ ┣ 📜ItemCard.js<br/>
+ ┃ ┃ ┣ 📜ItemCardList.js<br/>
+ ┃ ┃ ┣ 📜Loader.js<br/>
+ ┃ ┃ ┣ 📜NavBar.js<br/>
+ ┃ ┃ ┣ 📜notify.js<br/>
+ ┃ ┃ ┗ 📜ProductDetailsModal.js<br/>
+ ┃ ┣ 📂FireBaseDB<br/>
+ ┃ ┃ ┗ 📜firebaseInit.js<br/>
+ ┃ ┣ 📂Pages<br/>
+ ┃ ┃ ┣ 📜Cart.js<br/>
+ ┃ ┃ ┣ 📜ErrorPage.js<br/>
+ ┃ ┃ ┣ 📜Home.js<br/>
+ ┃ ┃ ┣ 📜MyOrder.js<br/>
+ ┃ ┃ ┣ 📜SignIn.js<br/>
+ ┃ ┃ ┗ 📜SignUp.js<br/>
+ ┃ ┣ 📂ReduxToolKit<br/>
+ ┃ ┃ ┣ 📜cartReducer.js<br/>
+ ┃ ┃ ┣ 📜productReducer.js<br/>
+ ┃ ┃ ┣ 📜store.js<br/>
+ ┃ ┃ ┗ 📜userReducer.js<br/>
+ ┃ ┣ 📜App.js<br/>
+ ┃ ┣ 📜index.css<br/>
+ ┃ ┗ 📜index.js<br/>
+ ┣ 📜.gitignore<br/>
+ ┣ 📜package-lock.json<br/>
+ ┣ 📜package.json<br/>
+ ┣ 📜README.md<br/>
+ ┣ 📜SOP.txt<br/>
+ ┗ 📜tailwind.config.js<br/>
+![Product Modal ](https://github.com/erpankajk4/ShopyShop-Redux-Version-/assets/118353291/57844ed7-afba-4b38-861b-d449a1d0726c)
+![SignIn Page](https://github.com/erpankajk4/ShopyShop-Redux-Version-/assets/118353291/2554c29d-baae-4966-ae76-570b43ef2d10)
+![SignOut Page](https://github.com/erpankajk4/ShopyShop-Redux-Version-/assets/118353291/c709882f-c949-430b-ac82-c6628b1f22d0)
+![Cart Page](https://github.com/erpankajk4/ShopyShop-Redux-Version-/assets/118353291/f9fca465-6f47-4a0e-aa53-99b7e942c7df)
+![My Order Page](https://github.com/erpankajk4/ShopyShop-Redux-Version-/assets/118353291/7ac51235-16ef-4085-b315-33d037789b36)
+![Loading](https://github.com/erpankajk4/ShopyShop-Redux-Version-/assets/118353291/a7be1788-ecac-4302-b1d9-00bd563e7ff5)
+![error page](https://github.com/erpankajk4/ShopyShop-Redux-Version-/assets/118353291/78a034f6-6076-475b-ab65-d9fb1b4aebb1)
 
 

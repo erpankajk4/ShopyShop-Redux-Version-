@@ -2,12 +2,10 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { auth } from '../FireBaseDB/firebaseInit';
 import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { notify } from "../Components/notify";
+
 const initialState = {
     userUID: localStorage.getItem("userUID") ? localStorage.getItem("userUID") : null
 };
-
-
-
 
 // Async thunk to handle user sign-in
 export const signIn = createAsyncThunk("userReducer/signIn",
@@ -22,8 +20,7 @@ export const signIn = createAsyncThunk("userReducer/signIn",
         thunkAPI.dispatch(userAction.updateUserUID(auth.currentUser.uid));
         // No need to return anything here as the 'updateUserUID' action will set the userUID in the state
     } catch (error) {
-        const errorMessage = error.message;
-        console.log("signIn failed:", errorMessage);
+        notify("error","User not found or incorrect password. Please check your credentials.");
         throw error; // Rethrow the error so that it will be treated as a rejected action
     }
 });
