@@ -2,7 +2,11 @@
 
 ShopyShop is a web application for the customers of an e-commerce business. It allows users to register, login, browse products, add them to a cart, make orders, and more.
 
-Hosted Link on Netlify - 
+## Hosted Link on Netlify
+https://shopyshop-redux.netlify.app - Click the Link to Preview <br/>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0c8ecddc-7bf5-45d3-8f79-df5d8485a808/deploy-status)](https://app.netlify.com/sites/shopyshop-redux/deploys) <br/>
+**Note:**
+Product loading on the hosted link may take about 10 seconds initially as it fetches data from the API and stores it in Firestore DB before rendering it on the DOM, but after the first loading, it loads faster.
 
 ## Table of Contents
 - [Demo](#demo)
