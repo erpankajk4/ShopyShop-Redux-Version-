@@ -63,11 +63,13 @@ function NavBar() {
                             <FontAwesomeIcon icon="home" className="mr-1" />
                             Home
                         </NavLink>
-                        {/* My Order Tab  */}
-                        <NavLink to="/myorder" className="text-white hover:text-gray-300 p-1">
-                            <FontAwesomeIcon icon="clipboard-list" className="mr-1" />
-                            My Order
-                        </NavLink>
+                        {/* My Order Tab (Conditional) */}
+                        {userUID && (
+                            <NavLink to="/myorder" className="text-white hover:text-gray-300 p-1">
+                                <FontAwesomeIcon icon="clipboard-list" className="mr-1" />
+                                My Orders
+                            </NavLink>
+                        )}
                         {/* Cart Tab  */}
                         <NavLink to="/cart" className="text-white hover:text-gray-300 relative p-1" onClick={e => handleCartClick(e)}>
                             <FontAwesomeIcon icon="shopping-cart" className="mr-1" />

@@ -34,10 +34,10 @@ export default function SignIn() {
     localStorage.setItem("password", password);
     // Naigate to sign up page if user not found
     if(!userUID) {
-      navigate("/signin");
+      navigate("/");
   } 
     // Navigate to the home page after successful sign-in
-    else navigate("/");
+    else navigate("/signin");
   };
 
   return (
