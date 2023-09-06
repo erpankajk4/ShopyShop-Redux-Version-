@@ -23,7 +23,7 @@ Product loading on the hosted link may take about 10 seconds initially as it fet
 
 - **User Authentication**: Register and log in to access your account.
 - **Product Catalog**: Browse a wide range of products with detailed information.
-- **Shopping Cart**: Add and remove products, adjust quantities and review your cart.
+- **Shopping Cart**: Add and remove products, adjust quantities and review your cart, cart badge.
 - **Real-time Updates**: Cart and product listings update in real-time using FireBase.
 - **Orders History**: View your past orders and purchase details.
 - **Efficient State Management**: Redux Toolkit ensures organized and efficient state handling.
