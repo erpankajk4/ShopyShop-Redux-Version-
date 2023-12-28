@@ -7,12 +7,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBuqw0ROo4f_jQXXDAYVjZpY6GTnAh1NgQ",
-  authDomain: "shopyshop-redux2.firebaseapp.com",
-  projectId: "shopyshop-redux2",
-  storageBucket: "shopyshop-redux2.appspot.com",
-  messagingSenderId: "605724745530",
-  appId: "1:605724745530:web:1acd670063142afe137a03"
+  apiKey: "AIzaSyCt2DC8FfngC4YS0t3_JzOn78GGrryDxzw",
+  authDomain: "shopyshop-redux3.firebaseapp.com",
+  projectId: "shopyshop-redux3",
+  storageBucket: "shopyshop-redux3.appspot.com",
+  messagingSenderId: "582596671939",
+  appId: "1:582596671939:web:f47bb0c9e45ffc24862576"
 };
 
 // Initialize Firebase
